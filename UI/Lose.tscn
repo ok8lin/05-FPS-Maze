@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/Lose.gd" type="Script" id=1]
+
+[node name="Lose" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 0.752941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_top = 2.0
+margin_right = 506.0
+margin_bottom = 538.0
+rect_scale = Vector2( 2, 1 )
+text = "You Lost. Play Again?"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart" type="Button" parent="ColorRect"]
+margin_left = 462.0
+margin_top = 350.0
+margin_right = 562.0
+margin_bottom = 390.0
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="ColorRect"]
+margin_left = 462.0
+margin_top = 400.0
+margin_right = 562.0
+margin_bottom = 440.0
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="ColorRect/Restart" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="ColorRect/Quit" to="." method="_on_Quit_pressed"]
